@@ -7,14 +7,14 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class FizzbuzzService {
 
-    public String enter(UserInput userInput) {
-        if(userInput.numb % 5 ==0 && userInput.numb % 3 ==0) {
+    public String enter(Integer userInput) {
+        if(userInput % 5 ==0 && userInput % 3 ==0) {
             return ("fizzbuzz");
         }
-            if(userInput.numb % 5==0 && userInput.numb %3 !=0){
+            if(userInput % 5==0 && userInput %3 !=0){
                 return ("fizz");
             }
-            if(userInput.numb % 5 !=0 && userInput.numb %3==0){
+            if(userInput % 5 !=0 && userInput %3==0){
                 return ("buzz");
             }
             return ("This number is not divisible by 5 and 3. ");
